@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Metablog on Otaviokr&#39;s Blog</title>
-    <link>http://otaviokr.github.io/categories/metablog/</link>
-    <description>Recent content in Metablog on Otaviokr&#39;s Blog</description>
+    <title>Github on Otaviokr&#39;s Blog</title>
+    <link>http://otaviokr.github.io/categories/github/</link>
+    <description>Recent content in Github on Otaviokr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>rofatto@gmail.com (Otavio Krambeck Rofatto)</managingEditor>
     <webMaster>rofatto@gmail.com (Otavio Krambeck Rofatto)</webMaster>
     <lastBuildDate>Mon, 08 Jun 2015 22:27:00 +0200</lastBuildDate>
-    <atom:link href="http://otaviokr.github.io/categories/metablog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://otaviokr.github.io/categories/github/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setting up your own free blog</title>
@@ -298,44 +298,6 @@ don&amp;rsquo;t think that&amp;rsquo;s a good idea to version the &lt;strong&gt;
 
 &lt;p&gt;Commit again &lt;em&gt;otaviokr-blog&lt;/em&gt; and now you&amp;rsquo;re really good to go! This is the first post about a series I&amp;rsquo;m starting to
 tell about my experiences with this blog. If you wish to know anything in more detail, let me know!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The start of something beautiful</title>
-      <link>http://otaviokr.github.io/posts/2015/the-start-of-something-beautiful/</link>
-      <pubDate>Wed, 03 Jun 2015 22:27:00 +0200</pubDate>
-      <author>rofatto@gmail.com (Otavio Krambeck Rofatto)</author>
-      <guid>http://otaviokr.github.io/posts/2015/the-start-of-something-beautiful/</guid>
-      <description>&lt;p&gt;I started this blog because I &lt;em&gt;like&lt;/em&gt; to write. I &lt;em&gt;need&lt;/em&gt; to write. And right now, things are placed perfectly to
-(re)start this little pet project: I want to interact more with &lt;a href=&#34;http://www.github.com/otaviokr&#34;&gt;Github&lt;/a&gt;, I&amp;rsquo;m learning
-&lt;a href=&#34;http://www.golang.org&#34;&gt;Go&lt;/a&gt;, and I&amp;rsquo;ve just found out about &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; and the idea of having an engine to
-generate static web-pages makes the whole point of having a blog more as a &lt;em&gt;repository of ideas&lt;/em&gt; with minimum maintance
-is just too good to ignore.&lt;/p&gt;
-
-&lt;p&gt;So, while I&amp;rsquo;m studying this new language, trying out new ideas and finding out some curious facts, I&amp;rsquo;m also writing.
-But I must confess I know this won&amp;rsquo;t be exclusively a blog about development, despite being one of my favourite topics:
-I&amp;rsquo;m just an ordinary nerd and I can&amp;rsquo;t help being excited for all the usual things nerds love: movies, TV series, games
-and so on. If you&amp;rsquo;re reading this site, I bet you&amp;rsquo;ll like to talk about those things as well; if not, just skip those
-posts that you don&amp;rsquo;t find interesting and come back anytime to check for new blog entries. And don&amp;rsquo;t hesitate to leave
-a message: I may avoid talking about the Marvel super-hero universe if everybody who reads my blog are more a DC person.&lt;/p&gt;
-
-&lt;p&gt;Anyways, expect to find a lot of &lt;strong&gt;series&lt;/strong&gt; here: a stream of many topics talking about only one theme and that should
-be read as one long post. I&amp;rsquo;ll try to keep a small &lt;em&gt;table of contents&lt;/em&gt; of some sort so readers can easily jump from one
-post to another, but I&amp;rsquo;m not sure exactly how I&amp;rsquo;m going to do that, so keep an eye for links on posts.&lt;/p&gt;
-
-&lt;p&gt;Also, I&amp;rsquo;m posting this right after having the system installed, and I expect to play around to customize the layout
-(perhaps even creating my own Hugo theme?) sometime in the near future, and I&amp;rsquo;ll appreciate any input, both about
-what to change in the current layout as to what include/exclude/modify in the new custom theme. I&amp;rsquo;ll try to post my
-findings and a walkthrough the whole process, but I&amp;rsquo;m not sure if that will be possible or even interesting&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;All source codes, examples and projects I&amp;rsquo;ll be using in this blog will be available at my&lt;br /&gt;
-&lt;a href=&#34;http://www.github.com/otaviokr&#34;&gt;Github repository&lt;/a&gt;: feel free to enjoy them as you like - I just kindly ask to always
-point where you find them! And, please, let me know too - not only I&amp;rsquo;ll be very proud to see that others find my work
-interesting, but I might as well publish here!&lt;/p&gt;
-
-&lt;p&gt;As expected, any suggestion and/or question are more than welcome! The blog still doesn&amp;rsquo;t have any kind of comment
-functionality, but you can find my on &lt;a href=&#34;http://www.twitter.com/okrofatto&#34;&gt;Twitter&lt;/a&gt;!&lt;/p&gt;
 </description>
     </item>
     

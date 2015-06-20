@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Setting up your own free blog"/>
+    <meta name="author" content="Otavio Krambeck Rofatto"/>
+    <base href="http://otaviokr.github.io/" />
+
+    <title>Setting up your own free blog</title>
+
+    <link rel="stylesheet" href="css/tabula-rasa.css"/>
+
+    <link href="index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
+    <link href="posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
+
+    
+</head>
+
+<body>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T9L4PM"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T9L4PM');</script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 blog-sidebar">
+            <div class="sidebar">
+    <div class="sidebar-about">
+        <a href="http://otaviokr.github.io">
+            <img src="media/me.jpg" title="Otavio Krambeck Rofatto" alt="Me" />
+            <h1 class="sidebar-title">Otaviokr&#39;s Blog</h1>
+        </a>
+        <span class="sidebar-tagline"></span>
+    </div>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-nav-list">
+            <li class="sidebar-nav-item nav-home">
+                [<a class="sidebar-link" href="http://otaviokr.github.io">Home</a>]
+            </li>
+            <li class="sidebar-nav-item">
+                [<a class="sidebar-link" href="https://about.me/">About Me</a>]
+            </li>
+            <li class="sidebar-nav-item">
+                [<a class="sidebar-link" href="posts/">Posts</a>]
+            </li>
+        </ul>
+    </nav>
+    <div class="sidebar-externals">
+        
+
+            
+                <a href="https://github.com/otaviokr" >
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x"></i>
+                    </span>
+                </a>
+            
+
+            
+                <a href="https://twitter.com/okrofatto">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                    </span>
+                </a>
+            
+
+            
+
+            
+
+            
+                <a href="https://www.linkedin.com/in/otaviorofatto">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x"></i>
+                    </span>
+                </a>
+            
+
+        
+        <a href="mailto:rofatto@gmail.com">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x"></i>
+            </span>
+        </a>
+    </div>
+    <hr />
+    <div class="sidebar-bottom">
+        <p>Powered by <a href="http://gohugo.io">Hugo</a>. Theme: <a href="https://github.com/otaviokr/tabula-rasa">Tabula-rasa</a>.</p>
+        <p>Copyright &copy; 2015. All rights reserved.</p>
+    </div>
+</div>
+
+        </div>
+
+        <div class="col-sm-8 col-sm-offset-1 blog-main">
+            <section class="post">
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="http://otaviokr.github.io/posts/2015/setting-up-your-own-free-blog">Setting up your own free blog </a>
+                    </h2>
+                    <p>
+                        
+    <span class="metadata">
+        
+            In: <a class="series" href="series/improving-the-blog">Improving the Blog</a> 
+        
+
+        &nbsp;/&nbsp;
+
+        
+            As: <a class="categories" href="categories/metablog">metablog</a> <a class="categories" href="categories/git">git</a> <a class="categories" href="categories/github">Github</a> 
+        
+
+        
+
+        
+    </span>
+
+
+                        <span class="post-date">
+                            <time datetime="2015-06-08T22:27:00&#43;02:00">
+                                08 Jun 2015, 22:27
+                            </time>
+                        </span>
+                    </p>
+                </header>
+                <div class="post-description">
+                    <hr />
+                    
+                        <p>Here's what this post is about: </p>
+                        <nav id="TableOfContents">
+<ul>
+<li><a href="#create-2-different-repositories">Create 2 different repositories</a></li>
+<li><a href="#setting-the-source-repository">Setting the source repository</a></li>
+<li><a href="#your-own-local-blog">Your own local blog</a></li>
+<li><a href="#putting-the-website-online">Putting the website online</a></li>
+<li><a href="#bonus-round-making-things-easier">Bonus round: making things easier</a></li>
+<li><a href="#bonus-round-2-the-eternal-struggle-on-windows-lf-crlf">Bonus round 2: The eternal struggle on Windows - LF &lt;=&gt; CRLF</a></li>
+</ul>
+</nav>
+                        <hr width="75%" />
+                    
+                    
+
+<p>There are many things I find interesting about the way this blog is deployed:</p>
+
+<ul>
+<li>It is only static pages, so you don&rsquo;t have to worry about huge frameworks, database management etc.</li>
+<li>Pages are written in Markdown language, so you have a clean and understandable text while writing.</li>
+<li>You can host it and many different places. I&rsquo;m choosing the Github Pages, so both my website project and the website
+itself are under a version control system.</li>
+<li>I can share my ideas much easily, because the code is already hosted on Github, available to anyone curious enough to
+sneak a peek.</li>
+<li>It&rsquo;s easy!</li>
+<li>It&rsquo;s free!</li>
+</ul>
+
+<p>I&rsquo;m assuming you already have a valid account at <a href="https://github.com/">Github</a>, installed <a href="http://www.git.com">Git</a> on
+your machine and downloaded <a href="http://gohugo.io/">Hugo</a>. No IDE is required for these tasks: everything can be managed
+just with your favorite text editor (I recommend <a href="https://notepad-plus-plus.org/">Notepad++</a> if you&rsquo;re in a Windows
+environment) and a terminal/prompt.</p>
+
+<p>I&rsquo;ll be using my repositories throughout this post as an example, so anywhere you read <em>otaviokr-blog</em> you may change
+by <em>source code repository named as you like it</em> while <em>otaviokr.github.io</em> means <em><your_username>.github.io</em>. Notice
+that Github allows you to have a website for a particular repository, but that&rsquo;s not what we&rsquo;re aiming here: this is to
+build the user&rsquo;s website - while you may have many project websites (one for each project you have), you can only have
+one user website.</p>
+
+<p>So here&rsquo;s the steps to create your own blog:</p>
+
+<h1 id="create-2-different-repositories">Create 2 different repositories</h1>
+
+<p>The source repository is where the website source code will be; you&rsquo;ll also need a Github Pages default repository.
+Feel free to name the first one as you like - mine is <a href="https://github.com/otaviokr/otaviokr-blog">otaviokr-blog</a>. Now,
+create another repository, following the pattern <code>&lt;your_username&gt;.github.io</code>, as in
+<em><a href="https://github.com/otaviokr/otaviokr.github.io">otaviokr.github.io</a></em>. This is the default name used by Github Pages,
+so when you create this repository, Github will understand that you want to have a website at
+<em><a href="http://your_username.github.io">http://your_username.github.io</a></em>. If you use a different repository name, it won&rsquo;t work - at least, not out-of-the-box.</p>
+
+<p>If you need help to create the repositories, you may use
+<a href="https://help.github.com/articles/create-a-repo/">Github&rsquo;s documentation</a> as a guideline.</p>
+
+<h1 id="setting-the-source-repository">Setting the source repository</h1>
+
+<p>Now it&rsquo;s time to work with the source repository, where the raw code of your site will be - I&rsquo;ll be using my repos as
+example,
+we&rsquo;ll handle <em>otaviokr-blog</em> now. First, open the terminal, enter the folder where you want to keep the local
+repositories and clone the first repository to your machine:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>git clone otaviokr-blog
+</pre></div>
+</p>
+
+<p>There&rsquo;s nothing there yet, so we&rsquo;ll add the blog skeleton manually[1]. Just create the following folders:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>mkdir content
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span>mkdir layouts
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>mkdir public
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4 </span>mkdir static
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5 </span>mkdir themes
+</pre></div>
+</p>
+
+<p>Brief explanation about the folders:</p>
+
+<ul>
+<li><em>content</em>: where your raw posts will be;</li>
+<li><em>layouts</em>: Hugo demands this folder, but I haven&rsquo;t use it so far;</li>
+<li><em>public</em>: where the compiled site will be generated;</li>
+<li><em>static</em>: to keep your static files, like images;</li>
+<li><em>themes</em>: where the blog template are stored.</li>
+</ul>
+
+<p>Now, create the configuration file on the root path (otaviokr-blog/) and name it config.yaml. Be careful to use just
+2 spaces for identation - YAML does not respond well to tabs. There are other optional parameters you can configure,
+and the theme you&rsquo;ll choose probably will have its own settings, but for now, what you need is just this - change the
+values whenever necessary!</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #000000">---</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #000000">contentdir</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;content&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span><span style="color: #000000">layoutdir</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;layouts&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span><span style="color: #000000">publishdir</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;public&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #000000">taxonomies</span><span style="color: #000000; font-weight: bold">:</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>  <span style="color: #000000">category</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;categories&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>  <span style="color: #000000">series</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;series&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span><span style="color: #000000">baseurl</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;http://otaviokr.github.io&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span><span style="color: #000000">title</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;Otaviokr&#39;s</span><span style="color: #000000"> </span><span style="color: #4e9a06">Blog&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span><span style="color: #000000">canonifyurls</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #000000">true</span>
+</pre></div>
+</p>
+
+<h1 id="your-own-local-blog">Your own local blog</h1>
+
+<p>Before sending it to the web, we&rsquo;ll configure it and test it locally, to see if everything is working as expected.
+First, you&rsquo;ll need a theme (aka template) for you blog. Hugo has a
+<a href="https://github.com/spf13/hugoThemes">great variety of themes</a> already, and you can create your own if you want, but,
+for now, let&rsquo;s just pick one to see the magic happening. I&rsquo;m using <a href="https://github.com/TiTi/hurock">hurock</a>, but you
+can choose your personal favorite.</p>
+
+<p>At the terminal, just enter inside <code>themes/</code> and clone the theme you want:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #204a87; font-weight: bold">cd</span> themes
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span>git clone https:<span style="color: #000000">//github.com/TiTi/hurock.git</span>
+</pre></div>
+</p>
+
+<p>Then append the parameters required by the theme in your <code>config.yaml</code> file. Hurock gives already a
+<a href="https://github.com/TiTi/hurock#config">template</a> with everything configured. Hurock also expects your picture saved as
+<code>static/media/me.jpg</code>.</p>
+
+<p>Now, let&rsquo;s create a simple post to check our blog. You may simple create a text file and copy the header or use Hugo:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>hugo new posts<span style="color: #000000">/2015/hello.md</span>
+</pre></div>
+</p>
+
+<p>File will be created at <code>content/posts/2015/hello.md</code>. Open it, change the configuration header if you want and enter
+some text after the header. Markdown syntax is enabled, so try to do something nice! When you&rsquo;re done, save and exit.</p>
+
+<p>Now, run:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>hugo server --watch
+</pre></div>
+</p>
+
+<p>This will compile the website and create a server where you can see your blog. Open you web browser and access
+<code>localhost:1313</code>. You should see the blog and your first post - if not, check for error messages in the terminal and
+review all the steps. If the blog is fine, Ctrl+C in the terminal to kill the server and delete everything under
+<code>public/</code> folder - don&rsquo;t worry, we&rsquo;ll generate it again later. Create an empty file named <code>.gitkeep</code> inside any folder
+that has no files - I believe it&rsquo;s <code>layouts/</code> and  <code>public/</code> - and commit the first version of you website source code:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>git add -A
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span>git commit -m <span style="color: #4e9a06">&quot;First commit.&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>git push origin master
+</pre></div>
+</p>
+
+<h1 id="putting-the-website-online">Putting the website online</h1>
+
+<p>Now we know that <code>public/</code> is where the website actually is, so let&rsquo;s clone the webiste repository <em>into</em> <code>public/</code>.
+That way, we&rsquo;ll just need to generate the site and push the commit to have the new article online.</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>git clone https:<span style="color: #000000">//github.com/otaviokr/otaviokr.github.io.git</span> public/
+</pre></div>
+</p>
+
+<p>The idea then is to run hugo to generate the site, add all generated files to the website repository and push changes.</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>hugo
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span><span style="color: #204a87; font-weight: bold">cd</span> public
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>git add -A
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4 </span>git commit -m <span style="color: #4e9a06">&quot;First post: Hello.&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5 </span>git push origin master
+</pre></div>
+</p>
+
+<p>It might take a while before you can check your site for the first time, but it is there! Just open a browser and go to
+<code>http://your_username.github.io</code>. There you go, now for each new post, just run the last piece of command to add it,
+commit it and deploy it.</p>
+
+<h1 id="bonus-round-making-things-easier">Bonus round: making things easier</h1>
+
+<p>Whenever a developer hears the sentence <em>you just need to do this thing again and again</em>, he quickly starts thinking
+what sort of script could do that automatically, am I right? So, let&rsquo;s improve a little our project.</p>
+
+<p>First, let&rsquo;s avoid having source and compiled code in the same repository. If you didn&rsquo;t created a <code>.gitignore</code> file
+while creating the <em>otaviokr-blog</em> repository, now it&rsquo;s the time. You may put anything you find relevant here, but we
+must algo include <code>public</code> so that folder is not in this project radar anymore.</p>
+
+<p>Now, the automation script. Let&rsquo;s create a <code>bin/</code> folder where we&rsquo;ll keep it and inside it create a script called
+<code>publish.bat</code> - I&rsquo;m in a Windows environment, but if you&rsquo;re in Linux, call it <code>publish.sh</code> and change the code as
+necessary&hellip; I&rsquo;ll try to create an example later, but you can check the
+<a href="http://gohugo.io/tutorials/github-pages-blog/">excellent original post</a> on which I based my version.</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #000000; font-weight: bold">@</span><span style="color: #204a87; font-weight: bold">echo</span> <span style="color: #204a87; font-weight: bold">off</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #204a87; font-weight: bold">echo</span> <span style="color: #4e9a06">&quot;Deploying updates to GitHub...&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span><span style="color: #204a87; font-weight: bold">cd</span> ..
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span><span style="color: #8f5902; font-style: italic">REM Build the project.  If using a theme, and it is not set in config.yaml, </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span><span style="color: #8f5902; font-style: italic">REM replace by `hugo -t &lt;yourtheme&gt;`</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>hugo
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span><span style="color: #8f5902; font-style: italic">REM Go To Public folder</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span><span style="color: #204a87; font-weight: bold">cd</span> public
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span><span style="color: #8f5902; font-style: italic">REM Add changes to git.</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>git add -A
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span><span style="color: #8f5902; font-style: italic">REM Commit changes. Count the number of arguments: </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span><span style="color: #8f5902; font-style: italic">REM if user has not given any, use default message.</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span><span style="color: #204a87; font-weight: bold">set</span> <span style="color: #000000">argC</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span><span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000">%%x</span> in (%*) <span style="color: #204a87; font-weight: bold">do</span> <span style="color: #204a87; font-weight: bold">Set</span> <span style="color: #000000">/A</span> argC+<span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span><span style="color: #204a87; font-weight: bold">For</span> <span style="color: #000000">/f</span> <span style="color: #4e9a06">&quot;tokens=2-4 delims=/ &quot;</span> <span style="color: #000000">%%a</span> in (<span style="color: #4e9a06">&#39;date /t&#39;</span>) <span style="color: #204a87; font-weight: bold">do</span> (<span style="color: #204a87; font-weight: bold">set</span> <span style="color: #000000">mydate</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">%%c</span>-<span style="color: #000000">%%a</span>-<span style="color: #000000">%%b</span>)
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span><span style="color: #204a87; font-weight: bold">For</span> <span style="color: #000000">/f</span> <span style="color: #4e9a06">&quot;tokens=1-2 delims=/:&quot;</span> <span style="color: #000000">%%a</span> in (<span style="color: #4e9a06">&#39;time /t&#39;</span>) <span style="color: #204a87; font-weight: bold">do</span> (<span style="color: #204a87; font-weight: bold">set</span> <span style="color: #000000">mytime</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">%%a%%b</span>)
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span><span style="color: #204a87; font-weight: bold">set</span> <span style="color: #000000">msg</span><span style="color: #ce5c00; font-weight: bold">=</span>rebuilding site <span style="color: #000000">%mydate%</span>_<span style="color: #000000">%mytime%</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000">%argC%</span> <span style="color: #ce5c00; font-weight: bold">equ</span> <span style="color: #0000cf; font-weight: bold">1</span> (
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span>    <span style="color: #204a87; font-weight: bold">set</span> <span style="color: #000000">msg</span><span style="color: #ce5c00; font-weight: bold">=</span>$<span style="color: #0000cf; font-weight: bold">1</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>)
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span>git commit -m <span style="color: #4e9a06">&quot;%msg%&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">29 </span><span style="color: #8f5902; font-style: italic">REM Push source and build repos.</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">30 </span>git push origin master
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">31 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">32 </span><span style="color: #8f5902; font-style: italic">REM Come Back</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">33 </span><span style="color: #204a87; font-weight: bold">cd</span> ..<span style="color: #000000">/bin</span>
+</pre></div>
+</p>
+
+<p>That&rsquo;s it! Just commit the new changes and now, whenever you create a new post, all you have to do is commit/push
+<em>otaviokr-blog</em> and, after, run <code>cd bin; publish.bat</code>. Unless, you&rsquo;re using Windows&hellip;</p>
+
+<h1 id="bonus-round-2-the-eternal-struggle-on-windows-lf-crlf">Bonus round 2: The eternal struggle on Windows - LF &lt;=&gt; CRLF</h1>
+
+<p>I won&rsquo;t explain much about line endings conflict because what you need to know is that the return carriage (aka
+new-line character) is different between Windows and Linux. Because Github favours Linux standard, whenever you try to
+commit something using Windows end-of-line char, you&rsquo;ll receive a fatal error and the operation will be aborted. To
+avoid that, I&rsquo;m using unix2dos to convert the files to Windows standard (CRLF).</p>
+
+<p>It is important to notice that this is only needed to <em>otaviokr.github.io</em> repository; in theory, all files at
+<em>otaviokr-blog</em> are already using the correct EOL char. First thing is to modify repository configuration, editing
+<code>.git/config</code> file:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #204a87; font-weight: bold">[core]</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>	<span style="color: #c4a000">repositoryformatversion</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">0</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span><span style="color: #4e9a06">	filemode = false</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span><span style="color: #4e9a06">	bare = false</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #4e9a06">	logallrefupdates = true</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span><span style="color: #4e9a06">	symlinks = false</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span><span style="color: #4e9a06">	ignorecase = true</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span><span style="color: #4e9a06">	hideDotFiles = dotGitOnly</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span><span style="background-color: #ffffcc"><span style="color: #4e9a06">	eol = native</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span><span style="background-color: #ffffcc"><span style="color: #4e9a06">	autocrlf = true</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span><span style="color: #204a87; font-weight: bold">[remote &quot;origin&quot;]</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>	<span style="color: #c4a000">url</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">https://github.com/otaviokr/otaviokr.github.io.git</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span><span style="color: #4e9a06">	fetch = +refs/heads/*:refs/remotes/origin/*</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span><span style="color: #204a87; font-weight: bold">[branch &quot;master&quot;]</span>
+</pre></div>
+</p>
+
+<p>Then download <strong>unix2dos</strong> program at their official site and extract the zip file at the <code>bin/unix2dos/</code> folder. I
+don&rsquo;t think that&rsquo;s a good idea to version the <strong>unix2dos</strong> program, so add to more lines to <code>.git/config</code> file:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>bin<span style="color: #000000">/unix2dos/bin</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span>bin<span style="color: #000000">/unix2dos/share</span>
+</pre></div>
+</p>
+
+<p>You&rsquo;ll also have to change the auto-publish script, so it converts the files before committing them.</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #000000; font-weight: bold">@</span><span style="color: #204a87; font-weight: bold">echo</span> <span style="color: #204a87; font-weight: bold">off</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #8f5902; font-style: italic">REM Created based on script at http://gohugo.io/tutorials/github-pages-blog/</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span><span style="color: #204a87; font-weight: bold">SETLOCAL</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #204a87; font-weight: bold">SET</span> <span style="color: #000000">PATH</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">%PATH%</span>; <span style="color: #000000">%__CD__%</span>unix<span style="color: #0000cf; font-weight: bold">2</span>dos<span style="color: #000000">/bin/</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span><span style="color: #204a87; font-weight: bold">echo</span> <span style="color: #000000">%PATH%</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span><span style="color: #204a87; font-weight: bold">echo</span> <span style="color: #4e9a06">&quot;Deploying updates to GitHub...&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span><span style="color: #8f5902; font-style: italic">REM Back to root parent dir.</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span><span style="color: #204a87; font-weight: bold">cd</span> ..
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span><span style="color: #8f5902; font-style: italic">REM Build the project.  If using a theme, and it is not set in config.yaml, </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span><span style="color: #8f5902; font-style: italic">REM replace by `hugo -t &lt;yourtheme&gt;`</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>hugo
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span><span style="color: #8f5902; font-style: italic">REM Listing all files to be converted LF-CRLF, if necessary.</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span><span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000">/r</span> public\ <span style="color: #000000">%%G</span> in (*.*) <span style="color: #204a87; font-weight: bold">do</span> unix<span style="color: #0000cf; font-weight: bold">2</span>dos.exe <span style="color: #000000">%%G</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span><span style="color: #8f5902; font-style: italic">REM Go To Public folder</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span><span style="color: #204a87; font-weight: bold">cd</span> public
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span><span style="color: #8f5902; font-style: italic">REM (...) - this original script part remains the same</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span><span style="color: #8f5902; font-style: italic">REM Come Back</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span><span style="color: #204a87; font-weight: bold">cd</span> ..<span style="color: #000000">/bin</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span><span style="color: #204a87; font-weight: bold">ENDLOCAL</span>
+</pre></div>
+</p>
+
+<p>Commit again <em>otaviokr-blog</em> and now you&rsquo;re really good to go! This is the first post about a series I&rsquo;m starting to
+tell about my experiences with this blog. If you wish to know anything in more detail, let me know!</p>
+
+                </div>
+            </section>
+
+                        <footer>
+                <p class="footnote">Copyright &copy; 2015:
+                    All rights reserved by <a href="mailto:rofatto@gmail.com">Otavio Krambeck Rofatto</a></p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+
+
+
+</body>
+</html>
+
