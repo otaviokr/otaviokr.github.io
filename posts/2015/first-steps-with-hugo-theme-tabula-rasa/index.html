@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="First Steps With Hugo Theme Tabula-Rasa"/>
+    <meta name="author" content="Otavio Krambeck Rofatto"/>
+    <base href="http://otaviokr.github.io/" />
+
+    <title>First Steps With Hugo Theme Tabula-Rasa</title>
+
+    <link rel="stylesheet" href="css/tabula-rasa.css"/>
+
+    <link href="index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
+    <link href="posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
+
+    
+</head>
+
+<body>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T9L4PM"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T9L4PM');</script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 blog-sidebar">
+            <div class="sidebar">
+    <div class="sidebar-about">
+        <a href="http://otaviokr.github.io">
+            <img src="media/me.jpg" title="Otavio Krambeck Rofatto" alt="Me" />
+            <h1 class="sidebar-title">Otaviokr&#39;s Blog</h1>
+        </a>
+        <span class="sidebar-tagline"></span>
+    </div>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-nav-list">
+            <li class="sidebar-nav-item nav-home">
+                [<a class="sidebar-link" href="http://otaviokr.github.io">Home</a>]
+            </li>
+            <li class="sidebar-nav-item">
+                [<a class="sidebar-link" href="https://about.me/">About Me</a>]
+            </li>
+            <li class="sidebar-nav-item">
+                [<a class="sidebar-link" href="posts/">Posts</a>]
+            </li>
+        </ul>
+    </nav>
+    <div class="sidebar-externals">
+        
+
+            
+                <a href="https://github.com/otaviokr" >
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x"></i>
+                    </span>
+                </a>
+            
+
+            
+                <a href="https://twitter.com/okrofatto">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                    </span>
+                </a>
+            
+
+            
+
+            
+
+            
+                <a href="https://www.linkedin.com/in/otaviorofatto">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x"></i>
+                    </span>
+                </a>
+            
+
+        
+        <a href="mailto:rofatto@gmail.com">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x"></i>
+            </span>
+        </a>
+    </div>
+    <hr />
+    <div class="sidebar-bottom">
+        <p>Powered by <a href="http://gohugo.io">Hugo</a>. Theme: <a href="https://github.com/otaviokr/tabula-rasa">Tabula-rasa</a>.</p>
+        <p>Copyright &copy; 2015. All rights reserved.</p>
+    </div>
+</div>
+
+        </div>
+
+        <div class="col-sm-8 col-sm-offset-1 blog-main">
+            <section class="post">
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="http://otaviokr.github.io/posts/2015/first-steps-with-hugo-theme-tabula-rasa">First Steps With Hugo Theme Tabula-Rasa </a>
+                    </h2>
+                    <p>
+                        
+    <span class="metadata">
+        
+            In: <a class="series" href="series/improving-the-blog">Improving the Blog</a> 
+        
+
+        &nbsp;/&nbsp;
+
+        
+            As: <a class="categories" href="categories/metablog">metablog</a> <a class="categories" href="categories/hugo">hugo</a> <a class="categories" href="categories/template">template</a> <a class="categories" href="categories/tabula-rasa">tabula-rasa</a> 
+        
+
+        
+
+        
+    </span>
+
+
+                        <span class="post-date">
+                            <time datetime="2015-06-19T23:24:04&#43;02:00">
+                                19 Jun 2015, 23:24
+                            </time>
+                        </span>
+                    </p>
+                </header>
+                <div class="post-description">
+                    <hr />
+                    
+                        <p>Here's what this post is about: </p>
+                        <nav id="TableOfContents">
+<ul>
+<li><a href="#what-is-a-theme">What is a <em>Theme</em>?</a></li>
+<li><a href="#can-i-use-a-template-from-other-plataforms-e-g-wordpress">Can I use a template from other plataforms (e.g., Wordpress)?</a></li>
+<li><a href="#you-only-need-three-files">You only need three files&hellip;</a></li>
+<li><a href="#and-a-handful-of-functions-and-variables">&hellip;and a handful of functions and variables</a></li>
+<li><a href="#splitting-into-partials">Splitting into partials</a></li>
+<li><a href="#what-about-that-archetype">What about that archetype?</a></li>
+</ul>
+</nav>
+                        <hr width="75%" />
+                    
+                    
+
+<h1 id="what-is-a-theme">What is a <em>Theme</em>?</h1>
+
+<p>If you&rsquo;re coming from any other blogging plataform, <em>theme</em> is just another name for a <em>template</em> - but keep in mind
+that Hugo uses <em>template</em> to talk about templating functionalities. Now, that&rsquo;s not very helpful if you know nothing
+about other blogging plataforms, so let me elaborate a little further.</p>
+
+<p>When you have a website, it&rsquo;s very likely that many - if not most - of you pages will have the exactly same
+look&rsquo;n&rsquo;feel, but with different content (in this blog, for example, notice how all post look exactly the same, with
+only the text itself being specific for each post. No imagine how much time I&rsquo;d lose writing all the HTML to get
+exactly the same layout - think if I wanted to change something like the text color! Maybe you just
+<a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">enjoy typing, but I prefer DRY solutions</a>.</p>
+
+<p>Here&rsquo;s a piece of my theme Tabula-Rasa (which is being used in this website BTW):</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span>{{ partial &quot;header.html&quot; . }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;container&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;row&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;col-sm-3 blog-sidebar&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>      {{ partial &quot;sidebar.html&quot; . }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;col-sm-8 col-sm-offset-1 blog-main&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>      <span style="color: #204a87; font-weight: bold">&lt;section</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;post&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>        <span style="color: #204a87; font-weight: bold">&lt;header</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;post-header&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>          <span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;post-title&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>            <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .RelPermalink }}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>              {{ .Title }} {{ if .Draft }}<span style="color: #204a87; font-weight: bold">&lt;small&gt;</span>(draft)<span style="color: #204a87; font-weight: bold">&lt;/small&gt;</span>{{end}}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>            <span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>          <span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>          <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>            {{ .Render &quot;metadata&quot; }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>            <span style="color: #204a87; font-weight: bold">&lt;span</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;post-date&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>              <span style="color: #204a87; font-weight: bold">&lt;time</span> <span style="color: #c4a000">datetime=</span><span style="color: #4e9a06">&quot;{{ .Date.Format &quot;</span><span style="color: #c4a000">2006-01-02T15:04:05Z07:00</span><span style="color: #a40000; border: 1px solid #ef2929">&quot;</span> <span style="color: #a40000; border: 1px solid #ef2929">}}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>                {{ .Date.Format &quot;02 Jan 2006, 15:04&quot; }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>              <span style="color: #204a87; font-weight: bold">&lt;/time&gt;</span>
+</pre></div>
+</p>
+
+<p>You can check the entire code at <code>layouts/_default/single.html</code>. I won&rsquo;t get into any detail yet, but those familiar
+with HTML probably are scratching their heads because of those double curly brackets (<strong>{{</strong> and <strong>}}</strong>): those are
+the template directives to render another HTML page inside this one, or to retrieve this post title.</p>
+
+<p>So, instead of write everything over and over again, we can define layouts and just point where the dynamic data (like
+the post text) should be placed and have the system taking care of creating the pages as designed.</p>
+
+<blockquote>
+<p>Here&rsquo;s a major difference between Hugo and other blogging tools: while Hugo process the posts and create all the
+pages using the layout only once, traditional plataforms - like Blogger, Wordpress and Django - will parse the
+post and use the template to generate a page only to serve it to a specific request.</p>
+</blockquote>
+
+<p>As I said in my <a href="http://otaviokr.github.io/posts/2015/setting-up-your-own-free-blog">introductory post</a>, there are many themes ready for use -
+including this one! Feel free to use it and leave any feedback! - but someday you&rsquo;ll want to play around the theme,
+yours or not, to create from scratch, just to fix an annoying bug or even to customize it. So, I&rsquo;ll just put you in the
+right direction and explain how I created my <a href="http://www.github.com/otaviokr/tabula-rasa">Tabula-Rasa</a>.</p>
+
+<h1 id="can-i-use-a-template-from-other-plataforms-e-g-wordpress">Can I use a template from other plataforms (e.g., Wordpress)?</h1>
+
+<p>Before diving in the code, let me just explain something for those that are really starting: you cannot use a Hugo
+Theme in any other plataform, nor you can get a template from other plataform (like Wordpress, Blogger, Django, Joomla,
+Drupal, etc.) to use directly on Hugo - you can salvage only the HTML/CSS/Javascript code, but you&rsquo;ll have to adapt all
+the templating functions, like where to put the title, the contents, authors etc. Now impossible, but be prepared for a
+lot of work.</p>
+
+<h1 id="you-only-need-three-files">You only need three files&hellip;</h1>
+
+<p>In a nutshell, we can say that Hugo has basically 3 types of pages: <strong>index</strong>, <strong>list</strong> and <strong>single</strong>. The index is
+the home page where the user should land when accessing you website at root path (meaning no specific post or page); a
+list is any page that should display multiple entries logically grouped, like all articles from a specific category;
+finally, the single is used to render all blog posts. If you define all those three pages, your site will be fully
+operational.</p>
+
+<p>However, if you check the Tabula-Rasa project, you&rsquo;ll notice it has more than only those 3 files, but the reason is
+very simple: remember the <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY principle</a>? To avoid writing the
+headers and footers for all pages (they are the same for single and index, for example), we can split the layout in
+many file and call them as needed.</p>
+
+<p>So, I suggest we start with very simple layout for each of the files - I hope you&rsquo;ll get excited to improve these files
+later, but for now, let&rsquo;s keep it as basic as possible to focus on the resources that Hugo has. Also, all files listed
+here must stored at <code>&lt;blog_root_project&gt;/themes/&lt;theme-name&gt;/</code> folder. Also, whenever I use <strong>Tabula-Rasa</strong> in this
+text, know that I&rsquo;m just saying about <em><theme_name></em>, except when I&rsquo;m talking about any particularities related to my
+theme. Here&rsquo;s the three main files:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">&quot;utf-8&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">http-equiv=</span><span style="color: #4e9a06">&quot;X-UA-Compatible&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;IE=edge&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;viewport&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;width=device-width, initial-scale=1&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;description&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Title }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;author&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Site.Author.name }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>    <span style="color: #204a87; font-weight: bold">&lt;base</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .Site.BaseURL }}/&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>    <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>{{ .Title }}<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>    <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>    <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;posts/index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>  <span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>  <span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>    {{ range where .Site.Pages &quot;Section&quot; &quot;posts&quot; }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>      <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>        <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .RelPermalink }}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>          {{ .Title }} {{ if .Draft }}<span style="color: #204a87; font-weight: bold">&lt;i&gt;</span>(draft)<span style="color: #204a87; font-weight: bold">&lt;/i&gt;</span>{{end}}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>        <span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>      <span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>      <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>        <span style="color: #204a87; font-weight: bold">&lt;time</span> <span style="color: #c4a000">datetime=</span><span style="color: #4e9a06">&quot;{{ .Date.Format &quot;</span><span style="color: #c4a000">2006-01-02T15:04:05Z07:00</span><span style="color: #a40000; border: 1px solid #ef2929">&quot;</span> <span style="color: #a40000; border: 1px solid #ef2929">}}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span>          {{ .Date.Format &quot;02 Jan 2006, 15:04&quot; }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span>        <span style="color: #204a87; font-weight: bold">&lt;/time&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>      <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span>      <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>{{ .Summary }}<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span>      {{ if .Truncated }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">29 </span>        <span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;readmore&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">30 </span>          <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;btn btn-primary&quot;</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .RelPermalink }}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">31 </span>            Read more...
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">32 </span>          <span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">33 </span>        <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">34 </span>      {{ end }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">35 </span>      <span style="color: #204a87; font-weight: bold">&lt;hr</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">36 </span>    {{ end }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">37 </span>  <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">38 </span><span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre></div>
+</p>
+
+<p>This is the <code>layouts/index.html</code>. I won&rsquo;t get any details yet, but I bet you can read the code and have an idea of
+what&rsquo;s going on.</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">&quot;utf-8&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">http-equiv=</span><span style="color: #4e9a06">&quot;X-UA-Compatible&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;IE=edge&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;viewport&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;width=device-width, initial-scale=1&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;description&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Title }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;author&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Site.Author.name }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>    <span style="color: #204a87; font-weight: bold">&lt;base</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .Site.BaseURL }}/&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>    <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>{{ .Title }}<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>    <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>    <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;posts/index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>  <span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>  <span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span><span style="background-color: #ffffcc">    <span style="color: #204a87; font-weight: bold">&lt;ul</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">&quot;posts&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span><span style="background-color: #ffffcc">      {{ range .Data.Pages }}
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span><span style="background-color: #ffffcc">        {{ if eq .Type .Section }}
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span><span style="background-color: #ffffcc">          <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span><span style="background-color: #ffffcc">            <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .RelPermalink }}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>{{ .Title }}<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span><span style="background-color: #ffffcc">            <span style="color: #204a87; font-weight: bold">&lt;time</span> <span style="color: #c4a000">datetime=</span><span style="color: #4e9a06">&quot;{{ .Date.Format &quot;</span><span style="color: #c4a000">2006-01-02T15:04:05Z07:00</span><span style="color: #a40000; border: 1px solid #ef2929">&quot;</span> <span style="color: #a40000; border: 1px solid #ef2929">}}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span><span style="background-color: #ffffcc">              {{ .Date.Format &quot;Mon, Jan 2, 2006&quot; }}
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span><span style="background-color: #ffffcc">            <span style="color: #204a87; font-weight: bold">&lt;/time&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span><span style="background-color: #ffffcc">          <span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span><span style="background-color: #ffffcc">        {{ end }}
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span><span style="background-color: #ffffcc">      {{ end }}
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span><span style="background-color: #ffffcc">    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span>  <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">29 </span><span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre></div>
+</p>
+
+<p>You&rsquo;ll notice that only what&rsquo;s inside <code>&lt;body&gt;</code> tag has changed. After all, there&rsquo;s nothing special about in a list but
+a bunch of links to other pages and the header should be basically the same for all pages. We&rsquo;ll have a best solution
+for this issue when we talk about partials.</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">&quot;utf-8&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">http-equiv=</span><span style="color: #4e9a06">&quot;X-UA-Compatible&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;IE=edge&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;viewport&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;width=device-width, initial-scale=1&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;description&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Title }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>    <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;author&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Site.Author.name }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>    <span style="color: #204a87; font-weight: bold">&lt;base</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .Site.BaseURL }}/&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>    <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>{{ .Title }}<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>    <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>    <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;posts/index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>  <span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>  <span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>    <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>      <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .RelPermalink }}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>        {{ .Title }} {{ if .Draft }}<span style="color: #204a87; font-weight: bold">&lt;small&gt;</span>(draft)<span style="color: #204a87; font-weight: bold">&lt;/small&gt;</span>{{end}}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>      <span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>    <span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>    <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>      <span style="color: #204a87; font-weight: bold">&lt;time</span> <span style="color: #c4a000">datetime=</span><span style="color: #4e9a06">&quot;{{ .Date.Format &quot;</span><span style="color: #c4a000">2006-01-02T15:04:05Z07:00</span><span style="color: #a40000; border: 1px solid #ef2929">&quot;</span> <span style="color: #a40000; border: 1px solid #ef2929">}}&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>        {{ .Date.Format &quot;02 Jan 2006, 15:04&quot; }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span>      <span style="color: #204a87; font-weight: bold">&lt;/time&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span>    <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>    {{ .Content }}
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span>  <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span><span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre></div>
+</p>
+
+<p>Again, the only changes in the code are inside <code>&lt;body&gt;</code> tag. With those three files, you already have a working
+blogging, but I guess you have no idea what&rsquo;s actually happening, so let&rsquo;s dive in the code and talk about functions
+and variables.</p>
+
+<h1 id="and-a-handful-of-functions-and-variables">&hellip;and a handful of functions and variables</h1>
+
+<p>First of all, this is <strong>not</strong> an extensive list of all functions and variables - the best source for such thing is the
+<a href="http://gohugo.io">official Hugo website</a> - <a href="http://gohugo.io/templates/functions/">functions</a> and
+<a href="http://gohugo.io/templates/variables/">variables</a>. I&rsquo;ll address just what we have used on those three initial files in
+the previous section - I&rsquo;m not posting the code again too, so, please refer to their listing in the previous section to
+see how these functions and variables are being used.</p>
+
+<p>Many of the variables I present below will give a different value depending on the context where they are being called.
+Context is defined by the system (for example, when rendering <code>single.html</code>, the context used is the <em>page</em> that&rsquo;s
+being rendered, while <code>index.html</code> uses the <em>site</em> context) but you can also define the context when calling a partial,
+using the dot (<code>.</code>) notation - e.g., <code>{{ partials &quot;my_partial.html&quot; . }}</code>. The dot means <em>current context</em>, so if you
+use it inside a <em>for-loop</em> the dot stands for <em>the current page set in the loop</em>.</p>
+
+<p>All variables and functions below are currently being used in Tabula-Rasa theme, so after studying this you should be
+able to understand everything happening in the theme - at least, at the moment I&rsquo;m writing this post&hellip; maybe some new
+variables/functions will be added later, and I&rsquo;m not sure I need to keep this list updated; anyway, this is certainly
+the basics and a very good start point. If you wish to know more, there&rsquo;s always the <a href="http://gohugo.io">Hugo website</a>.</p>
+
+<ul>
+<li><p><strong>.Summary</strong><br />
+This variable can only be used with a page context. Summary returns the first few lines of a post, with the Markdown
+parsed and all necessary HTML tags inserted.</p></li>
+
+<li><p><strong>.Content</strong><br />
+This variable can only be used with a page context. This is the entire post parsed and ready to be inserted in a HTML
+page.</p></li>
+
+<li><p><strong>.Date.Format &ldquo;2006-01-02T15:04:05Z07:00&rdquo;</strong><br />
+This variable can only be used with a page context. It displays the date defined in the post configuration, but with
+the specific format defined with the example. This is very handy when you need to use the date for links.</p></li>
+
+<li><p><strong>.Date.Format &ldquo;02 Jan 2006, 15:04&rdquo;</strong><br />
+This is basically the same as the previous item, but with a different format to display the date and time.</p></li>
+
+<li><p><strong>.Title</strong><br />
+If context is the site (if it&rsquo;s used on <code>index.html</code>, for example) this is the name of site, as defined in the
+<code>config.yaml</code> file as <code>title</code>; when used with a page as context, this is the blog post title.</p></li>
+
+<li><p><strong>.Site.Author.name</strong><br />
+Notice that we are forcing the site context here. If you look at the <code>config.yaml</code> file, you&rsquo;ll notice there&rsquo;s an
+author section, with some variables defined (see below). To access those variables, you must use this notation.</p></li>
+</ul>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>  <span style="color: #000000">author</span><span style="color: #000000; font-weight: bold">:</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span><span style="background-color: #ffffcc">    <span style="color: #000000">name</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;Otavio</span><span style="color: #000000"> </span><span style="color: #4e9a06">Krambeck</span><span style="color: #000000"> </span><span style="color: #4e9a06">Rofatto&quot;</span>
+</span><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>    <span style="color: #000000">email</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;rofatto@gmail.com&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4 </span>  
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5 </span>    <span style="color: #000000">github</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;otaviokr&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">6 </span>    <span style="color: #000000">twitter</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;okrofatto&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">7 </span>    <span style="color: #000000">linkedin</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;otaviorofatto&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">8 </span>    <span style="color: #000000">tag_manager</span><span style="color: #000000; font-weight: bold">:</span> <span style="color: #4e9a06">&quot;GTM-T9L4PM&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">9 </span>  
+</pre></div>
+</p>
+
+<ul>
+<li><p><strong>.Site.BaseURL</strong><br />
+The <code>baseurl</code> parameter defined in the <code>config.yaml</code> configuration file. As you can see you can access any parameter
+using <code>.Site.param_name</code> or <code>.Site.section.param_name</code>.</p></li>
+
+<li><p><strong>if .Draft</strong><br />
+This variable only makes sense in a page context. The function <code>if</code> is pretty obvious: check if the page is a draft.</p></li>
+
+<li><p><strong>if eq .Type .Section</strong><br />
+In the previous test, we just tested if a variable existed - or, if it&rsquo;s a boolean, if it exists and it is true. But
+that&rsquo;s very limited. So here&rsquo;s a more complex test: <em>check if variable <strong>Type</strong> has the same value as variable
+<strong>Section</strong></em>. Notice the order of the elements in the command; it&rsquo;s a little different than we are used to write.</p></li>
+
+<li><p><strong>range .Data.Pages</strong><br />
+If you&rsquo;re familiar with [Go](), you know <code>range</code> if how Go defines the for-loop. Here, we are going through all the
+pages available.</p></li>
+
+<li><p><strong>range where .Data.Pages &ldquo;Section&rdquo; &ldquo;posts&rdquo;</strong><br />
+This is a more sophisticated version of <code>range</code>. This may not be very intuitive, but it reads <em>loop over all pages
+which paramater <strong>Section</strong> is equal to <strong>post</strong></em>. This is a very power resource, and I strongly recommend to play
+with it for some time to understand how it works.</p></li>
+</ul>
+
+<h1 id="splitting-into-partials">Splitting into partials</h1>
+
+<p>Remember when I said to avoid writing the anything more than once and right after I presented three files with the same
+<code>&lt;head&gt;</code> content? So how can we avoid that, you may be wondering - and the answer is <strong>partials</strong>!</p>
+
+<p>A <em>partial</em> is a piece of a web page that can be reused. In our example, I&rsquo;ll make things simple and just change
+whatever is inside <code>&lt;head&gt;</code> tag, but take a look at the Tabula-Rasa project and you&rsquo;ll see many different applications
+- not only to avoid repetition, but also to encapsulate specific parts of the layout in order to have a website easier
+to maintain.</p>
+
+<p>So, remove the whole <code>&lt;head&gt;</code> tag from the three original files and replace them by the following code:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span>{{ partial &quot;header.html&quot; . }}
+</pre></div>
+</p>
+
+<p>I believe it&rsquo;s easy enough to understand that <code>partial</code> is the function name to render HTML pages inside HTML pages,
+<code>header.html</code> is the file name to load (it should be stored at <code>layouts/partials/</code> folder!) and the dot (<code>.</code>) indicates
+the context to be used inside that partial - the dot indicates the current context and it is usually the case to be
+used.</p>
+
+<p>Just in case you&rsquo;re not sure what should be removed from the three original files and saved into <code>header.html</code>, here&rsquo;s
+the entire code:</p>
+
+<p><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">&quot;utf-8&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">http-equiv=</span><span style="color: #4e9a06">&quot;X-UA-Compatible&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;IE=edge&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>  <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;viewport&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;width=device-width, initial-scale=1&quot;</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>  <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;description&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Title }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>  <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">&quot;author&quot;</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">&quot;{{ .Site.Author.name }}&quot;</span><span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>  <span style="color: #204a87; font-weight: bold">&lt;base</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;{{ .Site.BaseURL }}/&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>  <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>{{ .Title }}<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>  <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>  <span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">&quot;posts/index.xml&quot;</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">&quot;alternate&quot;</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">&quot;application/rss+xml&quot;</span> <span style="color: #c4a000">title=</span><span style="color: #4e9a06">&quot;Posts&quot;</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span><span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+</pre></div>
+</p>
+
+<p>As I said before, there&rsquo;s a lot of possibilities with partials. Feel free to explore and experiment and check the
+Tabula-Rasa code for inspiration. One particular case I find important enough to spend some time on it: pagination, and
+that&rsquo;s why I&rsquo;ll do a post just about that topic.</p>
+
+<h1 id="what-about-that-archetype">What about that archetype?</h1>
+
+<p>Archetypes are models. In our case, a post is an archetype and it will always be expected to have some parameters, like
+categories, table of contents flag etc. So we create an archetype that will include all those expected fields when we
+run the command <code>hugo new /posts/&lt;year&gt;/&lt;filename&gt;.md</code> to create a new post file. I won&rsquo;t extend too much in this
+subject, but I believe this is all you need to know to understand why that file is in the theme. If you want to
+customize it or know more, as always, check the <a href="http://gohugo.io">official Hugo website</a>.</p>
+
+                </div>
+            </section>
+
+                        <footer>
+                <p class="footnote">Copyright &copy; 2015:
+                    All rights reserved by <a href="mailto:rofatto@gmail.com">Otavio Krambeck Rofatto</a></p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+
+
+
+</body>
+</html>
+

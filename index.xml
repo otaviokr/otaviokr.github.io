@@ -8,8 +8,346 @@
     <language>en-us</language>
     <managingEditor>rofatto@gmail.com (Otavio Krambeck Rofatto)</managingEditor>
     <webMaster>rofatto@gmail.com (Otavio Krambeck Rofatto)</webMaster>
-    <lastBuildDate>Mon, 08 Jun 2015 22:27:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2015 23:24:04 +0200</lastBuildDate>
     <atom:link href="http://otaviokr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>First Steps With Hugo Theme Tabula-Rasa</title>
+      <link>http://otaviokr.github.io/posts/2015/first-steps-with-hugo-theme-tabula-rasa/</link>
+      <pubDate>Fri, 19 Jun 2015 23:24:04 +0200</pubDate>
+      <author>rofatto@gmail.com (Otavio Krambeck Rofatto)</author>
+      <guid>http://otaviokr.github.io/posts/2015/first-steps-with-hugo-theme-tabula-rasa/</guid>
+      <description>
+
+&lt;h1 id=&#34;what-is-a-theme&#34;&gt;What is a &lt;em&gt;Theme&lt;/em&gt;?&lt;/h1&gt;
+
+&lt;p&gt;If you&amp;rsquo;re coming from any other blogging plataform, &lt;em&gt;theme&lt;/em&gt; is just another name for a &lt;em&gt;template&lt;/em&gt; - but keep in mind
+that Hugo uses &lt;em&gt;template&lt;/em&gt; to talk about templating functionalities. Now, that&amp;rsquo;s not very helpful if you know nothing
+about other blogging plataforms, so let me elaborate a little further.&lt;/p&gt;
+
+&lt;p&gt;When you have a website, it&amp;rsquo;s very likely that many - if not most - of you pages will have the exactly same
+look&amp;rsquo;n&amp;rsquo;feel, but with different content (in this blog, for example, notice how all post look exactly the same, with
+only the text itself being specific for each post. No imagine how much time I&amp;rsquo;d lose writing all the HTML to get
+exactly the same layout - think if I wanted to change something like the text color! Maybe you just
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Don&#39;t_repeat_yourself&#34;&gt;enjoy typing, but I prefer DRY solutions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a piece of my theme Tabula-Rasa (which is being used in this website BTW):&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;{{ partial &amp;quot;header.html&amp;quot; . }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;col-sm-3 blog-sidebar&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;      {{ partial &amp;quot;sidebar.html&amp;quot; . }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;col-sm-8 col-sm-offset-1 blog-main&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;section&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;header&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;post-header&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;h2&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;post-title&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;            &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .RelPermalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;              {{ .Title }} {{ if .Draft }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;small&amp;gt;&lt;/span&gt;(draft)&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/small&amp;gt;&lt;/span&gt;{{end}}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;            &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;            {{ .Render &amp;quot;metadata&amp;quot; }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;            &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;span&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;post-date&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;              &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;time&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;datetime=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Date.Format &amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #c4a000&#34;&gt;2006-01-02T15:04:05Z07:00&lt;/span&gt;&lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;}}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;                {{ .Date.Format &amp;quot;02 Jan 2006, 15:04&amp;quot; }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;              &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/time&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You can check the entire code at &lt;code&gt;layouts/_default/single.html&lt;/code&gt;. I won&amp;rsquo;t get into any detail yet, but those familiar
+with HTML probably are scratching their heads because of those double curly brackets (&lt;strong&gt;{{&lt;/strong&gt; and &lt;strong&gt;}}&lt;/strong&gt;): those are
+the template directives to render another HTML page inside this one, or to retrieve this post title.&lt;/p&gt;
+
+&lt;p&gt;So, instead of write everything over and over again, we can define layouts and just point where the dynamic data (like
+the post text) should be placed and have the system taking care of creating the pages as designed.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Here&amp;rsquo;s a major difference between Hugo and other blogging tools: while Hugo process the posts and create all the
+pages using the layout only once, traditional plataforms - like Blogger, Wordpress and Django - will parse the
+post and use the template to generate a page only to serve it to a specific request.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As I said in my &lt;a href=&#34;http://otaviokr.github.io/posts/2015/setting-up-your-own-free-blog&#34;&gt;introductory post&lt;/a&gt;, there are many themes ready for use -
+including this one! Feel free to use it and leave any feedback! - but someday you&amp;rsquo;ll want to play around the theme,
+yours or not, to create from scratch, just to fix an annoying bug or even to customize it. So, I&amp;rsquo;ll just put you in the
+right direction and explain how I created my &lt;a href=&#34;http://www.github.com/otaviokr/tabula-rasa&#34;&gt;Tabula-Rasa&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;can-i-use-a-template-from-other-plataforms-e-g-wordpress&#34;&gt;Can I use a template from other plataforms (e.g., Wordpress)?&lt;/h1&gt;
+
+&lt;p&gt;Before diving in the code, let me just explain something for those that are really starting: you cannot use a Hugo
+Theme in any other plataform, nor you can get a template from other plataform (like Wordpress, Blogger, Django, Joomla,
+Drupal, etc.) to use directly on Hugo - you can salvage only the HTML/CSS/Javascript code, but you&amp;rsquo;ll have to adapt all
+the templating functions, like where to put the title, the contents, authors etc. Now impossible, but be prepared for a
+lot of work.&lt;/p&gt;
+
+&lt;h1 id=&#34;you-only-need-three-files&#34;&gt;You only need three files&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;In a nutshell, we can say that Hugo has basically 3 types of pages: &lt;strong&gt;index&lt;/strong&gt;, &lt;strong&gt;list&lt;/strong&gt; and &lt;strong&gt;single&lt;/strong&gt;. The index is
+the home page where the user should land when accessing you website at root path (meaning no specific post or page); a
+list is any page that should display multiple entries logically grouped, like all articles from a specific category;
+finally, the single is used to render all blog posts. If you define all those three pages, your site will be fully
+operational.&lt;/p&gt;
+
+&lt;p&gt;However, if you check the Tabula-Rasa project, you&amp;rsquo;ll notice it has more than only those 3 files, but the reason is
+very simple: remember the &lt;a href=&#34;https://en.wikipedia.org/wiki/Don&#39;t_repeat_yourself&#34;&gt;DRY principle&lt;/a&gt;? To avoid writing the
+headers and footers for all pages (they are the same for single and index, for example), we can split the layout in
+many file and call them as needed.&lt;/p&gt;
+
+&lt;p&gt;So, I suggest we start with very simple layout for each of the files - I hope you&amp;rsquo;ll get excited to improve these files
+later, but for now, let&amp;rsquo;s keep it as basic as possible to focus on the resources that Hugo has. Also, all files listed
+here must stored at &lt;code&gt;&amp;lt;blog_root_project&amp;gt;/themes/&amp;lt;theme-name&amp;gt;/&lt;/code&gt; folder. Also, whenever I use &lt;strong&gt;Tabula-Rasa&lt;/strong&gt; in this
+text, know that I&amp;rsquo;m just saying about &lt;em&gt;&lt;theme_name&gt;&lt;/em&gt;, except when I&amp;rsquo;m talking about any particularities related to my
+theme. Here&amp;rsquo;s the three main files:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;charset=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;http-equiv=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;IE=edge&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;width=device-width, initial-scale=1&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Title }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.Author.name }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;base&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.BaseURL }}/&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;posts/index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;    {{ range where .Site.Pages &amp;quot;Section&amp;quot; &amp;quot;posts&amp;quot; }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .RelPermalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;          {{ .Title }} {{ if .Draft }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;i&amp;gt;&lt;/span&gt;(draft)&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/i&amp;gt;&lt;/span&gt;{{end}}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;time&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;datetime=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Date.Format &amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #c4a000&#34;&gt;2006-01-02T15:04:05Z07:00&lt;/span&gt;&lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;}}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;          {{ .Date.Format &amp;quot;02 Jan 2006, 15:04&amp;quot; }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/time&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;{{ .Summary }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;      {{ if .Truncated }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;29 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;p&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;readmore&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;30 &lt;/span&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;btn btn-primary&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .RelPermalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;31 &lt;/span&gt;            Read more...
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;32 &lt;/span&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;33 &lt;/span&gt;        &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;34 &lt;/span&gt;      {{ end }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;35 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;hr&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;36 &lt;/span&gt;    {{ end }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;37 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;38 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This is the &lt;code&gt;layouts/index.html&lt;/code&gt;. I won&amp;rsquo;t get any details yet, but I bet you can read the code and have an idea of
+what&amp;rsquo;s going on.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;charset=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;http-equiv=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;IE=edge&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;width=device-width, initial-scale=1&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Title }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.Author.name }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;base&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.BaseURL }}/&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;posts/index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;ul&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;posts&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;      {{ range .Data.Pages }}
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;        {{ if eq .Type .Section }}
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;            &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .RelPermalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;            &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;time&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;datetime=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Date.Format &amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #c4a000&#34;&gt;2006-01-02T15:04:05Z07:00&lt;/span&gt;&lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;}}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;              {{ .Date.Format &amp;quot;Mon, Jan 2, 2006&amp;quot; }}
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;            &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/time&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;          &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;        {{ end }}
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;      {{ end }}
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;29 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll notice that only what&amp;rsquo;s inside &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; tag has changed. After all, there&amp;rsquo;s nothing special about in a list but
+a bunch of links to other pages and the header should be basically the same for all pages. We&amp;rsquo;ll have a best solution
+for this issue when we talk about partials.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #8f5902; font-style: italic&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;charset=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;http-equiv=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;IE=edge&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;width=device-width, initial-scale=1&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Title }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.Author.name }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;base&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.BaseURL }}/&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;posts/index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .RelPermalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;        {{ .Title }} {{ if .Draft }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;small&amp;gt;&lt;/span&gt;(draft)&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/small&amp;gt;&lt;/span&gt;{{end}}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;time&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;datetime=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Date.Format &amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #c4a000&#34;&gt;2006-01-02T15:04:05Z07:00&lt;/span&gt;&lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #a40000; border: 1px solid #ef2929&#34;&gt;}}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;        {{ .Date.Format &amp;quot;02 Jan 2006, 15:04&amp;quot; }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;      &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/time&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;    &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;    {{ .Content }}
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Again, the only changes in the code are inside &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; tag. With those three files, you already have a working
+blogging, but I guess you have no idea what&amp;rsquo;s actually happening, so let&amp;rsquo;s dive in the code and talk about functions
+and variables.&lt;/p&gt;
+
+&lt;h1 id=&#34;and-a-handful-of-functions-and-variables&#34;&gt;&amp;hellip;and a handful of functions and variables&lt;/h1&gt;
+
+&lt;p&gt;First of all, this is &lt;strong&gt;not&lt;/strong&gt; an extensive list of all functions and variables - the best source for such thing is the
+&lt;a href=&#34;http://gohugo.io&#34;&gt;official Hugo website&lt;/a&gt; - &lt;a href=&#34;http://gohugo.io/templates/functions/&#34;&gt;functions&lt;/a&gt; and
+&lt;a href=&#34;http://gohugo.io/templates/variables/&#34;&gt;variables&lt;/a&gt;. I&amp;rsquo;ll address just what we have used on those three initial files in
+the previous section - I&amp;rsquo;m not posting the code again too, so, please refer to their listing in the previous section to
+see how these functions and variables are being used.&lt;/p&gt;
+
+&lt;p&gt;Many of the variables I present below will give a different value depending on the context where they are being called.
+Context is defined by the system (for example, when rendering &lt;code&gt;single.html&lt;/code&gt;, the context used is the &lt;em&gt;page&lt;/em&gt; that&amp;rsquo;s
+being rendered, while &lt;code&gt;index.html&lt;/code&gt; uses the &lt;em&gt;site&lt;/em&gt; context) but you can also define the context when calling a partial,
+using the dot (&lt;code&gt;.&lt;/code&gt;) notation - e.g., &lt;code&gt;{{ partials &amp;quot;my_partial.html&amp;quot; . }}&lt;/code&gt;. The dot means &lt;em&gt;current context&lt;/em&gt;, so if you
+use it inside a &lt;em&gt;for-loop&lt;/em&gt; the dot stands for &lt;em&gt;the current page set in the loop&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;All variables and functions below are currently being used in Tabula-Rasa theme, so after studying this you should be
+able to understand everything happening in the theme - at least, at the moment I&amp;rsquo;m writing this post&amp;hellip; maybe some new
+variables/functions will be added later, and I&amp;rsquo;m not sure I need to keep this list updated; anyway, this is certainly
+the basics and a very good start point. If you wish to know more, there&amp;rsquo;s always the &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Summary&lt;/strong&gt;&lt;br /&gt;
+This variable can only be used with a page context. Summary returns the first few lines of a post, with the Markdown
+parsed and all necessary HTML tags inserted.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Content&lt;/strong&gt;&lt;br /&gt;
+This variable can only be used with a page context. This is the entire post parsed and ready to be inserted in a HTML
+page.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Date.Format &amp;ldquo;2006-01-02T15:04:05Z07:00&amp;rdquo;&lt;/strong&gt;&lt;br /&gt;
+This variable can only be used with a page context. It displays the date defined in the post configuration, but with
+the specific format defined with the example. This is very handy when you need to use the date for links.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Date.Format &amp;ldquo;02 Jan 2006, 15:04&amp;rdquo;&lt;/strong&gt;&lt;br /&gt;
+This is basically the same as the previous item, but with a different format to display the date and time.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Title&lt;/strong&gt;&lt;br /&gt;
+If context is the site (if it&amp;rsquo;s used on &lt;code&gt;index.html&lt;/code&gt;, for example) this is the name of site, as defined in the
+&lt;code&gt;config.yaml&lt;/code&gt; file as &lt;code&gt;title&lt;/code&gt;; when used with a page as context, this is the blog post title.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Site.Author.name&lt;/strong&gt;&lt;br /&gt;
+Notice that we are forcing the site context here. If you look at the &lt;code&gt;config.yaml&lt;/code&gt; file, you&amp;rsquo;ll notice there&amp;rsquo;s an
+author section, with some variables defined (see below). To access those variables, you must use this notation.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;  &lt;span style=&#34;color: #000000&#34;&gt;author&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;background-color: #ffffcc&#34;&gt;    &lt;span style=&#34;color: #000000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Otavio&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;Krambeck&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;Rofatto&amp;quot;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;    &lt;span style=&#34;color: #000000&#34;&gt;email&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;rofatto@gmail.com&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;4 &lt;/span&gt;  
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;5 &lt;/span&gt;    &lt;span style=&#34;color: #000000&#34;&gt;github&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;otaviokr&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;6 &lt;/span&gt;    &lt;span style=&#34;color: #000000&#34;&gt;twitter&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;okrofatto&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;7 &lt;/span&gt;    &lt;span style=&#34;color: #000000&#34;&gt;linkedin&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;otaviorofatto&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;8 &lt;/span&gt;    &lt;span style=&#34;color: #000000&#34;&gt;tag_manager&lt;/span&gt;&lt;span style=&#34;color: #000000; font-weight: bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;GTM-T9L4PM&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;9 &lt;/span&gt;  
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;.Site.BaseURL&lt;/strong&gt;&lt;br /&gt;
+The &lt;code&gt;baseurl&lt;/code&gt; parameter defined in the &lt;code&gt;config.yaml&lt;/code&gt; configuration file. As you can see you can access any parameter
+using &lt;code&gt;.Site.param_name&lt;/code&gt; or &lt;code&gt;.Site.section.param_name&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;if .Draft&lt;/strong&gt;&lt;br /&gt;
+This variable only makes sense in a page context. The function &lt;code&gt;if&lt;/code&gt; is pretty obvious: check if the page is a draft.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;if eq .Type .Section&lt;/strong&gt;&lt;br /&gt;
+In the previous test, we just tested if a variable existed - or, if it&amp;rsquo;s a boolean, if it exists and it is true. But
+that&amp;rsquo;s very limited. So here&amp;rsquo;s a more complex test: &lt;em&gt;check if variable &lt;strong&gt;Type&lt;/strong&gt; has the same value as variable
+&lt;strong&gt;Section&lt;/strong&gt;&lt;/em&gt;. Notice the order of the elements in the command; it&amp;rsquo;s a little different than we are used to write.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;range .Data.Pages&lt;/strong&gt;&lt;br /&gt;
+If you&amp;rsquo;re familiar with [Go](), you know &lt;code&gt;range&lt;/code&gt; if how Go defines the for-loop. Here, we are going through all the
+pages available.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;range where .Data.Pages &amp;ldquo;Section&amp;rdquo; &amp;ldquo;posts&amp;rdquo;&lt;/strong&gt;&lt;br /&gt;
+This is a more sophisticated version of &lt;code&gt;range&lt;/code&gt;. This may not be very intuitive, but it reads &lt;em&gt;loop over all pages
+which paramater &lt;strong&gt;Section&lt;/strong&gt; is equal to &lt;strong&gt;post&lt;/strong&gt;&lt;/em&gt;. This is a very power resource, and I strongly recommend to play
+with it for some time to understand how it works.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;splitting-into-partials&#34;&gt;Splitting into partials&lt;/h1&gt;
+
+&lt;p&gt;Remember when I said to avoid writing the anything more than once and right after I presented three files with the same
+&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; content? So how can we avoid that, you may be wondering - and the answer is &lt;strong&gt;partials&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;partial&lt;/em&gt; is a piece of a web page that can be reused. In our example, I&amp;rsquo;ll make things simple and just change
+whatever is inside &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; tag, but take a look at the Tabula-Rasa project and you&amp;rsquo;ll see many different applications
+- not only to avoid repetition, but also to encapsulate specific parts of the layout in order to have a website easier
+to maintain.&lt;/p&gt;
+
+&lt;p&gt;So, remove the whole &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; tag from the three original files and replace them by the following code:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;{{ partial &amp;quot;header.html&amp;quot; . }}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I believe it&amp;rsquo;s easy enough to understand that &lt;code&gt;partial&lt;/code&gt; is the function name to render HTML pages inside HTML pages,
+&lt;code&gt;header.html&lt;/code&gt; is the file name to load (it should be stored at &lt;code&gt;layouts/partials/&lt;/code&gt; folder!) and the dot (&lt;code&gt;.&lt;/code&gt;) indicates
+the context to be used inside that partial - the dot indicates the current context and it is usually the case to be
+used.&lt;/p&gt;
+
+&lt;p&gt;Just in case you&amp;rsquo;re not sure what should be removed from the three original files and saved into &lt;code&gt;header.html&lt;/code&gt;, here&amp;rsquo;s
+the entire code:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;charset=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;http-equiv=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;IE=edge&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;width=device-width, initial-scale=1&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Title }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;meta&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;content=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.Author.name }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;base&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;{{ .Site.BaseURL }}/&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;  &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;link&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;posts/index.xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;alternate&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;application/rss+xml&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #c4a000&#34;&gt;title=&lt;/span&gt;&lt;span style=&#34;color: #4e9a06&#34;&gt;&amp;quot;Posts&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;&lt;span style=&#34;color: #204a87; font-weight: bold&#34;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;As I said before, there&amp;rsquo;s a lot of possibilities with partials. Feel free to explore and experiment and check the
+Tabula-Rasa code for inspiration. One particular case I find important enough to spend some time on it: pagination, and
+that&amp;rsquo;s why I&amp;rsquo;ll do a post just about that topic.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-about-that-archetype&#34;&gt;What about that archetype?&lt;/h1&gt;
+
+&lt;p&gt;Archetypes are models. In our case, a post is an archetype and it will always be expected to have some parameters, like
+categories, table of contents flag etc. So we create an archetype that will include all those expected fields when we
+run the command &lt;code&gt;hugo new /posts/&amp;lt;year&amp;gt;/&amp;lt;filename&amp;gt;.md&lt;/code&gt; to create a new post file. I won&amp;rsquo;t extend too much in this
+subject, but I believe this is all you need to know to understand why that file is in the theme. If you want to
+customize it or know more, as always, check the &lt;a href=&#34;http://gohugo.io&#34;&gt;official Hugo website&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Setting up your own free blog</title>
